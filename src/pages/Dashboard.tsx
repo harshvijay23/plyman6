@@ -4,7 +4,7 @@ import DashboardLayout from "@/layouts/DashboardLayout";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import DashboardCard from "@/components/DashboardCard";
-import { Package, ChartBar, Users, MessageSquare, Delivery } from "lucide-react";
+import { Package, ChartBar, Users, MessageSquare, Truck } from "lucide-react";
 
 const Dashboard = () => {
   const [period, setPeriod] = useState("today");

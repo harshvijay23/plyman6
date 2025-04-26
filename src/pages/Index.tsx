@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import FeatureCard from "@/components/FeatureCard";
-import { Package, ChartBar, Users, MessageSquare, Delivery } from "lucide-react";
+import { Package, ChartBar, Users, MessageSquare, Truck } from "lucide-react";
 
 const Index = () => {
   return (
@@ -84,7 +84,7 @@ const Index = () => {
               description="Build and maintain relationships with customers through our simple CRM system."
             />
             <FeatureCard 
-              icon={Delivery}
+              icon={Truck}
               title="Delivery Management"
               description="Schedule and track deliveries, optimize routes, and keep customers informed."
             />

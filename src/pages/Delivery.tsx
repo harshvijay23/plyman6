@@ -4,7 +4,7 @@ import DashboardLayout from "@/layouts/DashboardLayout";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import EmptyState from "@/components/EmptyState";
-import { Delivery as DeliveryIcon, Plus, Search } from "lucide-react";
+import { Truck as DeliveryIcon, Plus, Search } from "lucide-react";
 
 const Delivery = () => {
   const [search, setSearch] = useState("");

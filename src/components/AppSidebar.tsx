@@ -7,7 +7,7 @@ import {
   Users, 
   Package, 
   MessageSquare,
-  Delivery 
+  Truck 
 } from "lucide-react";
 import {
   Sidebar,
@@ -55,13 +55,13 @@ const AppSidebar = () => {
     },
     {
       label: "Delivery",
-      icon: Delivery,
+      icon: Truck,
       path: "/delivery"
     }
   ];
 
   return (
-    <Sidebar collapsed={isCollapsed} className="border-r">
+    <Sidebar className="border-r">
       <SidebarHeader>
         <div className="flex items-center space-x-2 px-4 py-3">
           <img 
@@ -81,7 +81,7 @@ const AppSidebar = () => {
                 <SidebarMenuItem key={item.path}>
                   <SidebarMenuButton 
                     asChild
-                    active={location.pathname === item.path}
+                    isActive={location.pathname === item.path}
                   >
                     <Link to={item.path} className="flex items-center">
                       <item.icon size={20} className="mr-2" />
