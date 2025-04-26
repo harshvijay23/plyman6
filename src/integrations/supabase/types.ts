@@ -42,6 +42,21 @@ export type Database = {
         }
         Relationships: []
       }
+      plyman: {
+        Row: {
+          created_at: string
+          id: number
+        }
+        Insert: {
+          created_at?: string
+          id?: number
+        }
+        Update: {
+          created_at?: string
+          id?: number
+        }
+        Relationships: []
+      }
       sales: {
         Row: {
           customer_email: string | null

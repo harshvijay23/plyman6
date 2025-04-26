@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -35,11 +34,16 @@ const Navbar = ({ transparent = false }: NavbarProps) => {
             <a href="#how-it-works" className={`text-sm font-medium ${transparent ? "text-white/80 hover:text-white" : "text-foreground/80 hover:text-foreground"}`}>
               How It Works
             </a>
-            <Link to="/login" className={`text-sm font-medium ${transparent ? "text-white/80 hover:text-white" : "text-foreground/80 hover:text-foreground"}`}>
-              Login
+            <Link to="/login">
+              <Button 
+                variant="secondary"
+                className={transparent ? "bg-primary text-white hover:bg-primary/90" : ""}
+              >
+                Login
+              </Button>
             </Link>
             <Link to="/signup">
-              <Button variant={transparent ? "outline" : "default"} className={transparent ? "text-white border-white hover:bg-white hover:text-primary" : ""}>
+              <Button variant={transparent ? "secondary" : "default"}>
                 Sign up free
               </Button>
             </Link>

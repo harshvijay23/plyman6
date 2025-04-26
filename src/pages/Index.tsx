@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
@@ -14,12 +13,12 @@ const Index = () => {
       <section className="hero-gradient pt-32 pb-24 px-4 md:px-6 lg:px-8">
         <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row items-center gap-12">
-            <div className="w-full lg:w-1/2">
+            <div className="w-full">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
                 Manage your plywood business with ease
               </h1>
               <p className="text-lg text-white/90 mb-8">
-                PlyMan Business Hub is the all-in-one solution for plywood retailers. 
+                PlyMan is the all-in-one solution for plywood retailers. 
                 Simple, powerful, and <span className="font-bold underline">always free</span>.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -29,7 +28,11 @@ const Index = () => {
                   </Button>
                 </Link>
                 <Link to="/login">
-                  <Button size="lg" variant="outline" className="w-full sm:w-auto text-white border-white hover:bg-white hover:text-primary">
+                  <Button 
+                    size="lg" 
+                    variant="secondary"
+                    className="w-full sm:w-auto bg-primary text-white hover:bg-primary/90"
+                  >
                     Login to Dashboard
                   </Button>
                 </Link>
@@ -37,16 +40,6 @@ const Index = () => {
               <p className="text-white/70 text-sm mt-4">
                 Even a 10th pass guy can use it!
               </p>
-            </div>
-            <div className="w-full lg:w-1/2">
-              <div className="relative">
-                <img 
-                  src="/lovable-uploads/b0830730-1a6b-45b8-a805-ddfe61fa6358.png" 
-                  alt="PlyMan Mascot" 
-                  className="w-48 h-48 md:w-64 md:h-64 mx-auto animate-float" 
-                />
-                <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 w-24 h-6 bg-black/20 blur-md rounded-full"></div>
-              </div>
             </div>
           </div>
         </div>
@@ -176,7 +169,7 @@ const Index = () => {
                   alt="PlyMan Logo" 
                   className="h-8 w-8 mr-2"
                 />
-                <span className="text-lg font-bold">PlyMan Business Hub</span>
+                <span className="text-lg font-bold">PlyMan</span>
               </div>
               <div className="text-sm text-muted-foreground">
                 &copy; {new Date().getFullYear()} PlyMan. Always free, forever.
