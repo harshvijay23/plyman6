@@ -9,6 +9,77 @@ export type Json =
 export type Database = {
   public: {
     Tables: {
+      customers: {
+        Row: {
+          address: string | null
+          created_at: string
+          email: string | null
+          id: string
+          name: string
+          notes: string | null
+          phone: string | null
+        }
+        Insert: {
+          address?: string | null
+          created_at?: string
+          email?: string | null
+          id?: string
+          name: string
+          notes?: string | null
+          phone?: string | null
+        }
+        Update: {
+          address?: string | null
+          created_at?: string
+          email?: string | null
+          id?: string
+          name?: string
+          notes?: string | null
+          phone?: string | null
+        }
+        Relationships: []
+      }
+      deliveries: {
+        Row: {
+          address: string
+          created_at: string
+          customer_id: string | null
+          delivery_date: string
+          id: string
+          notes: string | null
+          status: string
+          updated_at: string
+        }
+        Insert: {
+          address: string
+          created_at?: string
+          customer_id?: string | null
+          delivery_date: string
+          id?: string
+          notes?: string | null
+          status?: string
+          updated_at?: string
+        }
+        Update: {
+          address?: string
+          created_at?: string
+          customer_id?: string | null
+          delivery_date?: string
+          id?: string
+          notes?: string | null
+          status?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "deliveries_customer_id_fkey"
+            columns: ["customer_id"]
+            isOneToOne: false
+            referencedRelation: "customers"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       inventory_items: {
         Row: {
           category: string | null
@@ -97,6 +168,39 @@ export type Database = {
             referencedColumns: ["id"]
           },
         ]
+      }
+      workers: {
+        Row: {
+          created_at: string
+          email: string | null
+          hourly_rate: number
+          id: string
+          name: string
+          phone: string | null
+          role: string
+          start_date: string
+        }
+        Insert: {
+          created_at?: string
+          email?: string | null
+          hourly_rate: number
+          id?: string
+          name: string
+          phone?: string | null
+          role: string
+          start_date?: string
+        }
+        Update: {
+          created_at?: string
+          email?: string | null
+          hourly_rate?: number
+          id?: string
+          name?: string
+          phone?: string | null
+          role?: string
+          start_date?: string
+        }
+        Relationships: []
       }
     }
     Views: {
